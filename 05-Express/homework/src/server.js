@@ -116,7 +116,7 @@ else{
 }
 })
 
-server.delete(PATH, (req, res) => {
+server.delete(PATH, (req, res) => {   //(7)
     let {id} = req.body;
 
     const post = posts.find((p) => p.id === parseInt(id));
@@ -128,7 +128,7 @@ server.delete(PATH, (req, res) => {
     return res.json({success: true})
 })
 
-server.delete('/author', (req, res) => {
+server.delete('/author', (req, res) => {   //(8)
     let {author} = req.body;
 
     const author_found = posts.find((p) => p.author === author);
